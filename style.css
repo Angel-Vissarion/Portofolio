@@ -1,0 +1,309 @@
+/* ----- Βασικό Στυλ ----- */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  transition: background 0.5s, color 0.5s;
+}
+
+/* ----- Light Mode ----- */
+body.light-mode {
+  background-color: #f5f5f5;       /* καθαρό ανοιχτό χρώμα */
+  color: #111;                     /* σκούρο, καθαρό μαύρο */
+  transition: all 0.5s ease;
+}
+
+body.light-mode header {
+  background: linear-gradient(135deg, #4CAF50, #2E8B57); /* gradient για μοντέρνο look */
+  color: #fff;
+  text-shadow: 0 0 5px rgba(255,255,255,0.5);            /* subtle glow */
+}
+
+body.light-mode nav {
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);                /* ελαφριά σκίαση */
+}
+
+body.light-mode nav a {
+  color: #111;                                           /* μαύρο για contrast */
+}
+
+body.light-mode nav a::after {
+  background-color: #1E90FF;                             /* φωτεινό μπλε underline */
+  box-shadow: 0 0 5px #1E90FF;                           /* subtle neon glow */
+}
+
+/* Sections */
+body.light-mode section {
+  background: #fff;
+  border-radius: 12px;
+  padding: 40px;
+  margin: 40px 0;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1), 
+              0 0 25px rgba(30,144,255,0.15);           /* subtle neon blue glow */
+}
+
+/* Footer */
+body.light-mode footer {
+  background: #f2f2f2;
+  color: #111;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+}
+
+/* ----- Dark Mode ----- */
+body.dark-mode {
+  background: linear-gradient(135deg, #0f0f0f, #1a1a2e, #16213e);
+  color: #f5f5f5;
+}
+
+body.dark-mode header {
+  background: transparent;
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc;
+}
+
+body.dark-mode nav {
+  background: rgba(20,20,40,0.85);
+  backdrop-filter: blur(10px);
+}
+
+body.dark-mode nav a {
+  color: #eee;
+}
+
+body.dark-mode nav a:hover {
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc;
+}
+
+body.dark-mode section {
+  background: rgba(255,255,255,0.05);
+}
+
+body.dark-mode section {
+    background: rgba(255, 255, 255, 0.05); /* ημιδιαφανές σκούρο φόντο */
+    border-radius: 20px;                   /* στρογγυλεμένες γωνίες */
+    padding: 30px;                         /* εσωτερικό περιθώριο */
+    margin: 20px 0;                         /* απόσταση μεταξύ sections */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4); /* ελαφριά σκιά */
+    transition: all 0.3s ease;
+}
+
+/* Προαιρετικό hover effect για πιο “ζωντανό” αποτέλεσμα */
+body.dark-mode section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+}
+
+
+
+/* ----- Header ----- */
+header {
+  text-align: center;
+  padding: 40px 20px;
+  position: relative;
+}
+
+#theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #222;       /* dark default */
+  color: #fff;
+  z-index: 2000;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+#theme-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.7);
+}
+
+/* ----- Navbar ----- */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 10px 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin: 0 20px;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: bold;
+  color: inherit;           /* παίρνει το χρώμα του theme */
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Animated underline */
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: currentColor; /* ίδια απόχρωση με το link */
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after,
+nav a.active::after {
+  width: 100%;  /* υπογράμμιση πλήρης στο hover ή active */
+}
+
+/* ----- Sections ----- */
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* ----- Footer ----- */
+footer {
+  text-align: center;
+  padding: 20px;
+}
+
+/* ===== Education Ul ===== */
+#education .education-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#education .education-list li {
+  margin-bottom: 18px;
+}
+
+.edu-card {
+  padding: 18px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.edu-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.18);
+}
+
+body.dark-mode .edu-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+body.light-mode .edu-card {
+  background: rgba(0,0,0,0.03);
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+.edu-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.15rem;
+}
+
+.edu-card p {
+  margin: 6px 0;
+  line-height: 1.6;
+}
+
+.badge-link {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  letter-spacing: -0.03em;
+}
+
+/* ===== Modern Hero ===== */
+.hero {
+  text-align: center;
+  padding: 100px 20px 80px;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.hero-eyebrow {
+  color: #38bdf8;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 7vw, 4.5rem);
+  margin: 0 0 12px;
+  line-height: 1.1;
+}
+
+.hero-role {
+  font-size: clamp(1.1rem, 3vw, 1.5rem);
+  font-weight: 600;
+  color: #38bdf8;
+}
+
+.hero-description {
+  max-width: 650px;
+  margin: 24px auto 30px;
+  line-height: 1.9;
+  opacity: 0.85;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 13px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(56, 189, 248, 0.18);
+}
+
+.hero-btn.primary {
+  background: #38bdf8;
+  color: #0f172a;
+}
+
+.hero-btn.secondary {
+  border: 1px solid #38bdf8;
+  color: inherit;
+}
