@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tech News – Aggelos Plisiotis</title>
+    <meta name="description" content="Latest technology headlines from Hacker News.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="wrap">
+            <a class="brand" href="index.html">
+                <span class="mono">AP</span>
+                <span>Aggelos Plisiotis</span>
+            </a>
+
+            <nav aria-label="Main">
+                <a href="index.html">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#education">Education</a>
+                <a href="index.html#skills">Skills</a>
+                <a href="index.html#projects">Projects</a>
+                <a href="blog.html">Blog</a>
+                <a href="news.html" class="on" aria-current="page">News</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+
+            <button id="theme" type="button" aria-label="Switch between light and dark mode">Dark</button>
+        </div>
+    </header>
+
+    <main class="wrap" id="top">
+        <section id="news">
+            <a class="back" href="index.html">← Back to home</a>
+            <h2>Tech news</h2>
+            <p class="sub">Technology headlines from Hacker News.</p>
+            <p class="note" id="news-status" role="status">Loading headlines…</p>
+            <div id="news-list"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="wrap">
+            <span>© 2026 Aggelos Vissarion Plisiotis</span>
+            <a href="index.html">Back to home</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
